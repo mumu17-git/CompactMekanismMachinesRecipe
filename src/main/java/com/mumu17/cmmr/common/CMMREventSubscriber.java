@@ -20,16 +20,6 @@ import java.nio.file.Path;
 @Mod.EventBusSubscriber(modid = CMMRMain.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class CMMREventSubscriber {
 
-    @SubscribeEvent
-    @OnlyIn(Dist.CLIENT)
-    public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
-        Player player = event.getEntity();
-        if (player.isShiftKeyDown() && event.getHand() == InteractionHand.MAIN_HAND) {
-            // シフトキーを押しながら右クリックしたときの処理
-
-        }
-    }
-
 
     @SubscribeEvent
     public static void onCommonSetup(FMLCommonSetupEvent event) {
