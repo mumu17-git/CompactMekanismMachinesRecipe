@@ -1,6 +1,7 @@
 package com.mumu17.cmmr.common;
 
 import com.mojang.logging.LogUtils;
+import com.mumu17.cmmr.client.ShiftRightClickHandler;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
