@@ -139,7 +139,7 @@ public class ShiftRightClickHandler {
     }
 
     public static Map<String, Integer> getZeroCountMap(Map<String, Integer> craftingList) {
-        Map<String,Integer> _craftingList = Map.copyOf(craftingList);
+        Map<String,Integer> _craftingList = new HashMap<>(Map.copyOf(craftingList));
         for(int i = 0;i < _craftingList.size();i++) {
             String key = _craftingList.keySet().toArray()[i].toString();
             _craftingList.replace(key, 0);
