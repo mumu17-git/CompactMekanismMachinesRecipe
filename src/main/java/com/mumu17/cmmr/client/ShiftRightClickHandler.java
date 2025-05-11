@@ -19,10 +19,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static com.mumu17.cmmr.common.CMMRItemList.*;
 
@@ -87,7 +84,7 @@ public class ShiftRightClickHandler {
                         continue;
                     }
 
-                    String itemId = MekGen+":"+item.getItem().toString();
+                    String itemId = Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item.getItem())).getNamespace()+":"+item.getItem().toString();
 
 
                     if (CRAFTING_LIST.containsKey(itemId)) {
