@@ -102,6 +102,22 @@ public class ShiftRightClickHandler {
                             CRAFTING_LIST_COUNT.get(CONTROL_ROD_ASSEMBLY) - CRAFTING_LIST.get(CONTROL_ROD_ASSEMBLY),
                             CRAFTING_LIST_COUNT.get(FISSION_FUEL_ASSEMBLY) - CRAFTING_LIST.get(FISSION_FUEL_ASSEMBLY),
                             CRAFTING_LIST_COUNT.get(REACTOR_GLASS) - CRAFTING_LIST.get(REACTOR_GLASS));
+                }else if(cid.equals(COMPACT_INDUSTRIAL_TURBINE)) {
+                    CRAFTING_CHECK = List.of(
+                            CRAFTING_LIST_COUNT.get(TURBINE_CASING) - CRAFTING_LIST.get(TURBINE_CASING),
+                            CRAFTING_LIST_COUNT.get(TURBINE_VENT) - CRAFTING_LIST.get(TURBINE_VENT),
+                            CRAFTING_LIST_COUNT.get(SATURATING_CONDENSER) - CRAFTING_LIST.get(SATURATING_CONDENSER),
+                            CRAFTING_LIST_COUNT.get(ELECTROMAGNETIC_COIL) - CRAFTING_LIST.get(ELECTROMAGNETIC_COIL),
+                            CRAFTING_LIST_COUNT.get(PRESSURE_DISPERSER) - CRAFTING_LIST.get(PRESSURE_DISPERSER),
+                            CRAFTING_LIST_COUNT.get(STRUCTURAL_GLASS) - CRAFTING_LIST.get(STRUCTURAL_GLASS));
+                }else if(cid.equals(COMPACT_THERMAL_EVAPORATION)) {
+                    CRAFTING_CHECK = List.of(
+                            CRAFTING_LIST_COUNT.get(THERMAL_EVAPORATION_BLOCK) - CRAFTING_LIST.get(THERMAL_EVAPORATION_BLOCK),
+                            CRAFTING_LIST_COUNT.get(THERMAL_EVAPORATION_CONTROLLER) - CRAFTING_LIST.get(THERMAL_EVAPORATION_CONTROLLER),
+                            CRAFTING_LIST_COUNT.get(THERMAL_EVAPORATION_VALVE) - CRAFTING_LIST.get(THERMAL_EVAPORATION_VALVE),
+                            CRAFTING_LIST_COUNT.get(STRUCTURAL_GLASS) - CRAFTING_LIST.get(STRUCTURAL_GLASS));
+                }else {
+                    return;
                 }
                 boolean check_count = true;
 
