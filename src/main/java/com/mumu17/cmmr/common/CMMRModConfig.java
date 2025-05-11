@@ -3,19 +3,21 @@ package com.mumu17.cmmr.common;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 
+import java.util.List;
+
 public class CMMRModConfig {
     public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
     public static final ForgeConfigSpec CONFIG;
 
-    public static final ForgeConfigSpec.ConfigValue<Integer> COMPACT_FISSION_REACTOR;
+    public static List<ForgeConfigSpec.ConfigValue<Integer>> COMPACT_FISSION_REACTOR = List.of();
 
     static {
         BUILDER.push("CompactFissionReactor");
-        COMPACT_FISSION_REACTOR = BUILDER
-                .define("fission_reactor_casing", 64*3).next()
-                .define("control_rod_assembly", 64*2).next()
-                .define("fission_fuel_assembly", 64*13).next()
-                .define("reactor_glass", 64*9);
+        COMPACT_FISSION_REACTOR.add(BUILDER.define("fission_reactor_casing", 64*3));
+        COMPACT_FISSION_REACTOR.add(BUILDER.define("control_rod_assembly", 64*2));
+        COMPACT_FISSION_REACTOR.add(BUILDER.define("fission_fuel_assembly", 64*13));
+        COMPACT_FISSION_REACTOR.add(BUILDER.define("reactor_glass", 64*9));
+
         BUILDER.pop();
 
         CONFIG = BUILDER.build();
