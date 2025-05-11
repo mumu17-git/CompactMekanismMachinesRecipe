@@ -3,13 +3,15 @@ package com.mumu17.cmmr.common;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class CMMRModConfig {
     public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
     public static final ForgeConfigSpec CONFIG;
 
-    public static List<ForgeConfigSpec.ConfigValue<Integer>> COMPACT_FISSION_REACTOR = List.of();
+    public static List<ForgeConfigSpec.ConfigValue<Integer>> COMPACT_FISSION_REACTOR = new ArrayList<>();
 
     static {
         BUILDER.push("CompactFissionReactor");
