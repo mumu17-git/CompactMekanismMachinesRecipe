@@ -21,21 +21,5 @@ import java.nio.file.Path;
 public class CMMREventSubscriber {
 
 
-    @SubscribeEvent
-    public static void onCommonSetup(FMLCommonSetupEvent event) {
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, CMMRModConfig.CONFIG);
-
-        // コンフィグファイルのパスを取得
-        Path configPath = FMLPaths.CONFIGDIR.get().resolve(CMMRMain.MODID+"-config.toml");
-
-        // コンフィグファイルが存在しない場合に自動生成
-        if (!Files.exists(configPath)) {
-            CommentedFileConfig configData = CommentedFileConfig.builder(configPath).sync().autosave().writingMode(WritingMode.REPLACE).build();
-            configData.load();
-            CMMRModConfig.CONFIG.setConfig(configData);
-            configData.save();
-        }
-    }
-
 }
 

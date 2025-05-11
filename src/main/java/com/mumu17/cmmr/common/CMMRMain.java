@@ -16,6 +16,5 @@ public class CMMRMain {
 
     public CMMRMain() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        modEventBus.addListener(CMMREventSubscriber::onCommonSetup);
     }
 }
