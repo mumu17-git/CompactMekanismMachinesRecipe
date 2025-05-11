@@ -61,3 +61,10 @@ mandatory = true
 versionRange = "${minecraft_version_range}"
 ordering = "NONE"
 side = "BOTH"
+
+[[dependencies."${mod_id}"]]
+modId = "compactmekanismmachines"
+mandatory = true
+versionRange = "${mod_version}"
+ordering = "NONE"
+side = "BOTH"

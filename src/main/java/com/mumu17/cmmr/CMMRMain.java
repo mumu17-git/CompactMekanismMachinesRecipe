@@ -33,9 +33,7 @@ import org.slf4j.Logger;
 @Mod(CMMRMain.MODID)
 public class CMMRMain {
 
-    // Define mod id in a common place for everything to reference
     public static final String MODID = "cmmr";
-    // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public CMMRMain() {
